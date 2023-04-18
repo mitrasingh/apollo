@@ -1,6 +1,8 @@
 import React from 'react'
 import { Col, Container, Form, FormControl, InputGroup, Row } from 'react-bootstrap'
 
+//testing changes
+
 export const SearchBar = () => {
     return (
         <Container className="mt-4">
