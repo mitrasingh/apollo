@@ -1,15 +1,18 @@
+import { Route, Routes } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
-import { TaskCard } from './components/TaskCard';
-import { SearchBar } from './components/SearchBar';
+import { Home } from './pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { CreateTask } from './pages/CreateTask';
 
 
 function App() {
   return (
     <div className="App">
-      <Navigation />
-      <SearchBar />
-      <TaskCard />
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/createtask" element={<CreateTask />} />
+        </Routes>
     </div>
   )
 }
