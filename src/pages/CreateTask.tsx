@@ -1,25 +1,31 @@
 import React from 'react'
 import { Button, Container, Form } from 'react-bootstrap'
 
+
 export const CreateTask = () => {
   return (
-    <Container>
+    <Container className="mt-4">
     <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Task Name</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
-        <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
-        </Form.Text>
+      <Form.Group className="mb-3" controlId="taskName">
+        <Form.Label>Task name</Form.Label>
+        <Form.Control type="text" placeholder="Enter the name of task" />
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+        <Form.Label>Description of task</Form.Label>
+        <Form.Control as="textarea" rows={3} placeholder="Give a short description of the task you are requesting."/>
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+
+      <Form.Group className="mb-3" controlId="progress">
+        <Form.Label>What percent of the task is complete?</Form.Label>
+        <Form.Control type="text" placeholder="i.e. 25%" />
       </Form.Group>
+
+      <Form.Group className="mb-3" controlId="dueDate">
+        <Form.Label>Due date</Form.Label>
+        <Form.Control type="text" placeholder="mm/dd/yyyy" />
+      </Form.Group>
+
       <Button variant="primary" type="submit">
         Submit
       </Button>
