@@ -21,7 +21,7 @@ export const Navigation = () => {
             <Col md="auto">   
                 <Nav style={{fontSize: "11px"}} className="me-auto fw-bold mt-1">
                     <Nav.Link href="/createtask">Create Task</Nav.Link>
-                    <Nav.Link href="#features" className="ms-2">Shout Board</Nav.Link>
+                    <Nav.Link href="/shoutboard" className="ms-2">Shout Board</Nav.Link>
                 </Nav>
             </Col>
             <Col xs lg="2">
