@@ -14,7 +14,7 @@ export const SearchBar = () => {
                         width="30"
                         height="30"
                         className="d-inline-block align-top"
-                        alt="Apollo Logo"
+                        alt="Search bar button"
                         />
                     </InputGroup.Text>
                     <FormControl style={{fontSize: "11px"}} type="search" className="me-2" placeholder="Search tasks..." />

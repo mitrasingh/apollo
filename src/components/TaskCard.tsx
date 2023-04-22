@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { ViewTaskModal } from './ViewTaskModal'
 import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 
+
 export const TaskCard = () => {
-  return (
+
+    const [show, setShow] = useState(false)
+
+    const handleClose = () => setShow(false)
+
+    return (
+    <>
     <Container className="mt-4">
         <Card>
             <Card.Header style={{fontSize: "9px", height: "30px"}}>Task ID: 432564363</Card.Header>
@@ -32,12 +40,30 @@ export const TaskCard = () => {
                         <p style={{fontSize: "10px"}} className="mt-2 ms-2">Created by: UserName</p>
                     </Col>
                     <Col xs lg="2" className="d-flex mt-1">
-                        <Button style={{fontSize: "10px", maxHeight: "30px"}} variant="primary" size="sm" className="px-3">View</Button>
-                        <Button style={{fontSize: "10px", maxHeight: "30px"}} variant="primary" size="sm" className="px-3 ms-2">Edit</Button>
+                        <Button 
+                            style={{fontSize: "10px", maxHeight: "30px"}} 
+                            variant="primary" 
+                            size="sm" 
+                            className="px-3" 
+                            onClick={() => setShow(true)}>
+                                View
+                        </Button>
+
+                        {/* IF VIEW BUTTON IS CLICKED MODAL IS SHOWN */}
+                        <ViewTaskModal show={show} handleClose={handleClose}/> 
+                        
+                        <Button 
+                            style={{fontSize: "10px", maxHeight: "30px"}} 
+                            variant="primary" 
+                            size="sm" 
+                            className="px-3 ms-2">
+                                Edit
+                        </Button>
                     </Col>
                 </Row>
             </Card.Body>
         </Card>
     </Container>
-  )
+    </> 
+    )
 }

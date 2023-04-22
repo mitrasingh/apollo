@@ -1,0 +1,59 @@
+import React, { useState } from 'react'
+import { Button, Col, Modal, ModalBody, Row } from 'react-bootstrap'
+
+type ViewTaskModalProps = {
+    show: boolean;
+    handleClose: () => void;
+  };
+
+export const ViewTaskModal = ({show, handleClose}: ViewTaskModalProps) => {
+
+    return (
+        <>
+        <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+                <Modal.Title>Project Name</Modal.Title>
+            </Modal.Header>
+
+            <Modal.Body style={{fontSize:"11px"}}>
+                <p className="fw-bold" style={{margin: "0px"}}>Description of Task</p>
+                <p> Here will be the description of the individual task. Will put a limit on
+                    how many characters will be in this area. Maybe will implement a scroll 
+                    feature if it's too long.
+                </p>
+               
+                <p className="fw-bold" style={{margin: "0px"}}>Percent Completed</p>
+                <p>75%</p>
+
+                <p className="fw-bold" style={{margin: "0px"}}>Due Date</p>
+                <p>06/14/2023</p>
+            </Modal.Body>
+
+            <Modal.Body>
+                <img
+                    src="public/default-profile.png"
+                    width="35"
+                    height="35"
+                    className="d-inline-block align-top"
+                    alt="Apollo Logo"
+                />
+                <p style={{fontSize: "10px"}} className="mt-2 ms-2">Created by: UserName</p>
+            </Modal.Body>
+
+            <Modal.Footer>
+                <Button 
+                    style={{fontSize: "10px", maxHeight: "30px"}} 
+                    className="ms-2" 
+                    variant="primary" 
+                    size="sm" 
+                    onClick={handleClose}>
+                    Done
+                </Button>
+            </Modal.Footer>
+        </Modal>     
+        </>
+    )
+}
+
+// NOTE: MOVE USESTATE FROM TASKCARD TO HERE WITH HANDLE FUNCS THEN ON TASKCARD WE CREATE A 
+// FUNCT TO TRIGGER VIEWTASKMODAL
