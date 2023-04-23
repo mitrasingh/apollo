@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import { ViewTaskModal } from './ViewTaskModal'
+import { EditTaskModal } from './EditTaskModal'
 import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 
 
 export const TaskCard = () => {
 
     const [show, setShow] = useState(false)
-
+    const [showEditModal, setShowEditModal] = useState(false)
     const handleClose = () => setShow(false)
+    const handleEditModalClose = () => setShowEditModal(false)
 
     return (
     <>
@@ -40,25 +42,29 @@ export const TaskCard = () => {
                         <p style={{fontSize: "10px"}} className="mt-2 ms-2">Created by: UserName</p>
                     </Col>
                     <Col xs lg="2" className="d-flex mt-1">
+
+                        {/* IF EDIT BUTTON IS CLICKED AND MATCHES USER MODAL IS SHOWN */}
+                        <EditTaskModal showEditModal={showEditModal} handleEditModalClose={handleEditModalClose}/> 
                         <Button 
                             style={{fontSize: "10px", maxHeight: "30px"}} 
                             variant="primary" 
                             size="sm" 
-                            className="px-3" 
-                            onClick={() => setShow(true)}>
-                                View
+                            className="px-3"
+                            onClick={() => setShowEditModal(true)}>
+                                Edit
                         </Button>
 
                         {/* IF VIEW BUTTON IS CLICKED MODAL IS SHOWN */}
                         <ViewTaskModal show={show} handleClose={handleClose}/> 
-                        
                         <Button 
                             style={{fontSize: "10px", maxHeight: "30px"}} 
                             variant="primary" 
                             size="sm" 
-                            className="px-3 ms-2">
-                                Edit
+                            className="px-3 ms-2" 
+                            onClick={() => setShow(true)}>
+                                View
                         </Button>
+
                     </Col>
                 </Row>
             </Card.Body>

@@ -27,7 +27,7 @@ export const CreateTask = () => {
         <Form.Control style={{fontSize: "10px"}} type="text" placeholder="mm/dd/yyyy" />
       </Form.Group>
 
-      <Button style={{fontSize: "10px", maxHeight: "30px"}} variant="secondary" size="sm" type="submit">
+      <Button style={{fontSize: "10px", maxHeight: "30px"}} variant="secondary" size="sm" href="/">
         Cancel
       </Button>
 

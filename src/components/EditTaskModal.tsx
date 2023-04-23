@@ -1,16 +1,15 @@
 import React from 'react'
 import { Button, Modal, Stack } from 'react-bootstrap'
 
-type ViewTaskModalProps = {
-    show: boolean;
-    handleClose: () => void;
-  };
+type EditTaskModalProps = {
+    showEditModal: boolean;
+    handleEditModalClose: () => void;
+}
 
-export const ViewTaskModal = ({show, handleClose}: ViewTaskModalProps) => {
-
-    return (
+export const EditTaskModal = ({showEditModal, handleEditModalClose}: EditTaskModalProps) => {
+  return (
         <>
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={showEditModal} onHide={handleEditModalClose}>
             <Modal.Header closeButton>
                 <Modal.Title>Project Name</Modal.Title>
             </Modal.Header>
@@ -45,13 +44,22 @@ export const ViewTaskModal = ({show, handleClose}: ViewTaskModalProps) => {
                 <Button 
                     style={{fontSize: "10px", maxHeight: "30px"}} 
                     className="ms-2" 
+                    variant="secondary" 
+                    size="sm" 
+                    onClick={handleEditModalClose}>
+                    Cancel
+                </Button>
+
+                <Button 
+                    style={{fontSize: "10px", maxHeight: "30px"}} 
+                    className="ms-2" 
                     variant="primary" 
                     size="sm" 
-                    onClick={handleClose}>
-                    Done
+                    type="submit">
+                     Submit
                 </Button>
             </Modal.Footer>
         </Modal>     
         </>
-    )
+  )
 }
