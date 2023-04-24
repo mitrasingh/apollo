@@ -20,13 +20,14 @@ export const Navigation = () => {
             </Col> 
             <Col md="auto">   
                 <Nav style={{fontSize: "11px"}} className="me-auto fw-bold mt-1">
+                    <Nav.Link href="/" className="me-2">Home</Nav.Link>
                     <Nav.Link href="/createtask">Create Task</Nav.Link>
                     <Nav.Link href="/shoutboard" className="ms-2">Shout Board</Nav.Link>
                 </Nav>
             </Col>
-            <Col xs lg="2">
+            <Col xs lg="2" className="d-flex justify-content-end">
                 <Nav>
-                <Nav.Link style={{fontSize: "10px"}} className="fw-bold mt-1" href="#pricing">Hello, Mitch!</Nav.Link>
+                <Nav.Link style={{fontSize: "10px"}} className="fw-bold mt-1 " href="#pricing">Hello, Mitch!</Nav.Link>
                     <Navbar.Brand href="#home">
                         <img
                         src="public/default-profile.png"

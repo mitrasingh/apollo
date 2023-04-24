@@ -1,8 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { Home } from './pages/Home';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { CreateTask } from './pages/CreateTask';
+import { Shoutboard } from './pages/Shoutboard';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/createtask" element={<CreateTask />} />
+          <Route path="/shoutboard" element={<Shoutboard />} />
         </Routes>
     </div>
   )
