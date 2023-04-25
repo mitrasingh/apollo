@@ -13,7 +13,7 @@ export const TaskCard = () => {
 
     return (
     <>
-    <Container className="mt-4">
+    <Container className="mt-1">
         <Card>
             <Card.Header style={{fontSize: "9px", height: "30px"}}>Task ID: 432564363</Card.Header>
             <Card.Body>

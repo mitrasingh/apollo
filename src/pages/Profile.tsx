@@ -62,4 +62,3 @@ export const Profile = () => {
   )
 }
 
-// picture profile, first name, last name, title, email, location

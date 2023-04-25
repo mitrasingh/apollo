@@ -5,7 +5,7 @@ export const SearchBar = () => {
     return (
         <Container className="mt-4">
             <Row className="justify-content-center">
-                <Col sm={4}>
+                <Col sm={5}>
                 <Form className="d-flex">
                     <InputGroup>
                     <InputGroup.Text className="bg-white">

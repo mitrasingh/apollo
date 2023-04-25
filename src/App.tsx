@@ -4,6 +4,7 @@ import { Home } from './pages/Home';
 import { CreateTask } from './pages/CreateTask';
 import { Shoutboard } from './pages/Shoutboard';
 import { Profile } from './pages/Profile';
+import { Login } from './pages/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/createtask" element={<CreateTask />} />
           <Route path="/shoutboard" element={<Shoutboard />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
     </div>
   )
