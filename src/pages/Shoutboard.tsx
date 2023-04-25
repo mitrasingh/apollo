@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Col, Container, Row, Stack } from 'react-bootstrap'
+import { Card, Col, Container, Form, Row, Stack } from 'react-bootstrap'
 
 export const Shoutboard = () => {
   return (
@@ -28,13 +28,38 @@ export const Shoutboard = () => {
               </Row>
               <Row style={{fontSize: "10px"}}>
                 <p>Message will appear in this area. Character limit to be determined.</p>
-                <p style={{fontSize: "8px"}} className="fw-bold">Thumbs Up Icon</p>
               </Row>
+              <img
+                src="public/thumbs-dark.png"
+                width="20"
+                height="20"
+                className="align-top"
+                alt="Apollo Logo"
+              />
             </Col>
-            <hr></hr>
+            <hr className="mt-2"></hr>
           </Row>
         </Card.Body>
       </Card>
+
+      <Form className="mt-3">
+        <Row>
+        <Col xs lg="11">
+          <Form.Group className="mb-3" controlId="sendMessage">
+            <Form.Control style={{fontSize: "10px"}} type="text" placeholder="Type something..." />
+          </Form.Group>
+        </Col>
+
+        <Col xs lg="1">
+          <img
+                src="public/send.png"
+                width="20"
+                height="20"
+                alt="Send message icon"
+          />
+        </Col>
+        </Row>
+      </Form>
     </Container>
     </>
   )

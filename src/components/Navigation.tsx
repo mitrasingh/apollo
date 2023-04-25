@@ -13,7 +13,7 @@ export const Navigation = () => {
                     width="30"
                     height="30"
                     className="d-inline-block align-top"
-                    alt="Apollo Logo"
+                    alt="apollo logo"
                     />
                 </Navbar.Brand>
                 <Navbar.Brand className="fw-bold" href="/">Apollo</Navbar.Brand>
@@ -28,13 +28,13 @@ export const Navigation = () => {
             <Col xs lg="2" className="d-flex justify-content-end">
                 <Nav>
                 <Nav.Link style={{fontSize: "10px"}} className="fw-bold mt-1 " href="#pricing">Hello, Mitch!</Nav.Link>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="/profile">
                         <img
                         src="public/default-profile.png"
                         width="30"
                         height="30"
                         className="d-inline-block align-top"
-                        alt="Apollo Logo"
+                        alt="user image"
                         />
                     </Navbar.Brand>
                 </Nav>
