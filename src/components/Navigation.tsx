@@ -26,6 +26,7 @@ export const Navigation = () => {
                 </Nav>
             </Col>
             <Col xs lg="2" className="d-flex justify-content-end">
+                
                 <Nav>
                 <Nav.Link style={{fontSize: "10px"}} className="fw-bold mt-1 " href="#pricing">Hello, Mitch!</Nav.Link>
                     <Navbar.Brand href="/profile">
@@ -38,6 +39,7 @@ export const Navigation = () => {
                         />
                     </Navbar.Brand>
                 </Nav>
+            
             </Col>
         </Container>
     </Navbar>

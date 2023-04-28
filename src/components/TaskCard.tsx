@@ -62,7 +62,7 @@ export const TaskCard = () => {
                             size="sm" 
                             className="px-3 ms-2" 
                             onClick={() => setShow(true)}>
-                                View
+                                Details
                         </Button>
 
                     </Col>
