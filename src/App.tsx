@@ -6,18 +6,21 @@ import { Shoutboard } from './pages/Shoutboard';
 import { Profile } from './pages/Profile';
 import { Login } from './pages/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
 
 
 function App() {
+
+  const [userLoggedIn, setUserLoggedIn] = useState(true)
+
   return (
     <div className="App">
-        <Navigation />
+        {userLoggedIn ? <Navigation /> : <Login />}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/createtask" element={<CreateTask />} />
           <Route path="/shoutboard" element={<Shoutboard />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/login" element={<Login />} />
         </Routes>
     </div>
   )
