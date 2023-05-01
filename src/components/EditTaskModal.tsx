@@ -15,13 +15,13 @@ export const EditTaskModal = ({showEditModal, handleEditModalClose}: EditTaskMod
             </Modal.Header>
 
             <Modal.Body style={{fontSize:"11px"}}>
-                <p className="fw-bold" style={{margin: "0px"}}>Current Task Name</p>
                 <Form.Group className="mb-3" controlId="progress">
+                    <Form.Label className="fw-bold" style={{margin: "2px"}}>Current Task Name</Form.Label>
                     <Form.Control style={{fontSize: "10px"}} type="text" value="Project Name" />
                 </Form.Group>
 
-                <p className="fw-bold" style={{margin: "0px"}}>Description of Task</p>
                 <Form.Group className="mb-3" controlId="progress">
+                    <Form.Label className="fw-bold" style={{margin: "2px"}}>Description of Task</Form.Label>
                     <Form.Control 
                         style={{fontSize: "10px"}} 
                         type="text" as="textarea" 
@@ -29,14 +29,26 @@ export const EditTaskModal = ({showEditModal, handleEditModalClose}: EditTaskMod
                         value="Here will be the description of the individual task. Will put a limit on how many characters will be in this area. Maybe will implement a scroll feature if it's too long." 
                     />
                 </Form.Group>
-               
-                <p className="fw-bold" style={{margin: "0px"}}>Percent Completed</p>
+
+
                 <Form.Group className="mb-3" controlId="progress">
+                    <Form.Label className="fw-bold" style={{margin: "2px"}}>Status of Project</Form.Label>
+                    <Form.Select style={{fontSize: "10px"}} aria-label="Default select example">
+                    <option>Select options</option>
+                    <option value="1">On Hold</option>
+                    <option value="2">In Progress</option>
+                    <option value="3">Done</option>
+                    <option value="4">Cancelled</option>
+                    </Form.Select>
+                </Form.Group>
+               
+                <Form.Group className="mb-3" controlId="progress">
+                    <Form.Label className="fw-bold" style={{margin: "2px"}}>Percent Completed</Form.Label>
                     <Form.Control style={{fontSize: "10px"}} type="text" value="75%" />
                 </Form.Group>
 
-                <p className="fw-bold" style={{margin: "0px"}}>Due Date</p>
                 <Form.Group className="mb-3" controlId="progress">
+                    <Form.Label className="fw-bold" style={{margin: "2px"}}>Due Date</Form.Label>
                     <Form.Control style={{fontSize: "10px"}} type="text" value="06/14/2023" />
                 </Form.Group>
 
