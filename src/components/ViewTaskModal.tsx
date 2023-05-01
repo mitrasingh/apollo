@@ -21,6 +21,9 @@ export const ViewTaskModal = ({show, handleClose}: ViewTaskModalProps) => {
                     how many characters will be in this area. Maybe will implement a scroll 
                     feature if it's too long.
                 </p>
+
+                <p className="fw-bold" style={{margin: "0px"}}>Status of Project</p>
+                <p>In Progress</p>
                
                 <p className="fw-bold" style={{margin: "0px"}}>Percent Completed</p>
                 <p>75%</p>
