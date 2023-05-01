@@ -14,7 +14,18 @@ export const CreateTask = () => {
 
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
         <Form.Label style={{fontSize: "10px"}} className="fw-bold">Description of task</Form.Label>
-        <Form.Control style={{fontSize: "10px"}} as="textarea" rows={3} placeholder="Give a short description of the task you are requesting."/>
+        <Form.Control style={{fontSize: "10px", resize: "none"}} as="textarea" rows={3} placeholder="Give a short description of the task you are requesting."/>
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="progress">
+        <Form.Label style={{fontSize: "10px"}} className="fw-bold">What is the status of this project?</Form.Label>
+        <Form.Select style={{fontSize: "10px"}} aria-label="Default select example">
+          <option>Select options</option>
+          <option value="1">On Hold</option>
+          <option value="2">In Progress</option>
+          <option value="3">Done</option>
+          <option value="4">Cancelled</option>
+        </Form.Select>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="progress">
