@@ -43,7 +43,7 @@ export const TaskCard = () => {
                     </Col>
                     <Col xs lg="2" className="d-flex mt-1">
 
-                        {/* IF EDIT BUTTON IS CLICKED AND MATCHES USER MODAL IS SHOWN */}
+                        {/* IF EDIT BUTTON IS CLICKED AND MATCHES LOGGED IN USER - MODAL IS SHOWN */}
                         <EditTaskModal showEditModal={showEditModal} handleEditModalClose={handleEditModalClose}/> 
                         <Button 
                             style={{fontSize: "10px", maxHeight: "30px"}} 
