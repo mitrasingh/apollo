@@ -1,5 +1,5 @@
-import React from 'react'
-import { Button, ButtonGroup, Col, Container, Dropdown, Row } from 'react-bootstrap'
+import { Button, ButtonGroup, Container, Dropdown } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 export const Filter = () => {
   return (
@@ -10,10 +10,10 @@ export const Filter = () => {
         <Dropdown.Toggle style={{maxHeight: "20px"}} className="d-flex align-items-center" split variant="dark" id="dropdown-split-basic" />
 
         <Dropdown.Menu style={{fontSize: "10px"}}>
-            <Dropdown.Item href="#/action-1">by Due Date</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">by Percentage</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">by Status</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">by Name</Dropdown.Item>
+            <Dropdown.Item as={Link} to="">by Due Date</Dropdown.Item>
+            <Dropdown.Item as={Link} to="">by Percentage</Dropdown.Item>
+            <Dropdown.Item as={Link} to="">by Status</Dropdown.Item>
+            <Dropdown.Item as={Link} to="">by Name</Dropdown.Item>
         </Dropdown.Menu>
         </Dropdown>   
     </Container>
